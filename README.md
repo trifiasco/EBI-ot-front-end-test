@@ -4,8 +4,8 @@ The Open Targets Platform aggregates and integrates data from more than 20 diffe
 create evidence that builds and scores associations between diseases and genes (also known as targets).
 
 Our association score ranges from 0 to 1 and is a harmonic sum of individual scores for 4 different
-data types: _literature_, _rna_expression_, _genetic_association_, _somatic_mutation_, _known_drug_,
-_animal_model_, and _affected_pathway_.
+data types: **literature**, **rna_expression**, **genetic_association**, **somatic_mutation**,
+**known_drug**, **animal_model**, and **affected_pathway**.
 
 A score of 0 corresponds to no evidence supporting an association . The closer the score is to 1, the
 stronger the association. If you would like to know more about our association score, please
