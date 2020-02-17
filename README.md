@@ -14,7 +14,7 @@ visit https://docs.targetvalidation.org/getting-started/scoring.
 For this technical test, we would like you to create a data table and visualisation showing the association
 scores for lung carcinoma and 5 genes (targets).
 
-Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our design spec:
+Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our [design spec](https://docs.google.com/presentation/d/1AtzOKq3W9wUUf1nuTgXoq1cgrAgmLVYtpjGPrtTe47s):
 
 1. Create a data table with the following column headings:
 
