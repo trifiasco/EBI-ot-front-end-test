@@ -16,10 +16,10 @@ scores for lung carcinoma and 5 genes (targets).
 
 Create a data table with the following column headings:
 
-Symbol
-Gene ID
-Gene Name
-Overall Association Score
+- Symbol
+- Gene ID
+- Gene Name
+- Overall Association Score
 
 When a user clicks the “+”, please expand the row of the table. Please show either a bar chart or a radar chart of the association scores for each individual data type (literature, rna_expression, genetic_association, somatic_mutation, known_drug, animal_model, affected_pathway)
 
