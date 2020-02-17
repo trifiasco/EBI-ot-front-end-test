@@ -1,20 +1,16 @@
 # Technical Test
 
-The Open Targets Platform aggregates and integrates data from more than 20 different data sources to
-create evidence that builds and scores associations between diseases and genes (also known as targets).
+The Open Targets Platform aggregates and integrates data from more than 20 different data sources to create evidence that builds and scores associations between diseases and drug targets (human genes).
 
-Our association score ranges from 0 to 1 and is a harmonic sum of individual scores for 4 different
-data types: **literature**, **rna_expression**, **genetic_association**, **somatic_mutation**,
-**known_drug**, **animal_model**, and **affected_pathway**.
+Our association score ranges from 0 to 1 and is a harmonic sum of individual scores of 7 different data types: `literature`, `rna_expression`, `genetic_association`, `somatic_mutation`, `known_drug`, `animal_model`, and `affected_pathway`.
 
-A score of 0 corresponds to no evidence supporting an association . The closer the score is to 1, the
-stronger the association. If you would like to know more about our association score, please
-visit https://docs.targetvalidation.org/getting-started/scoring.
+A score of 0 corresponds to no evidence supporting an association. The closer the score is to 1, the stronger the association. If you would like to know more about our association score, please visit [our scoring documentation page](https://docs.targetvalidation.org/getting-started/scoring).
 
-For this technical test, we would like you to create a data table and visualisation showing the association
-scores for lung carcinoma and 5 genes (targets).
+## Instructions
 
-Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our [design spec](https://docs.google.com/presentation/d/1AtzOKq3W9wUUf1nuTgXoq1cgrAgmLVYtpjGPrtTe47s):
+We would like you to create a data table and visualisation showing the association scores for lung carcinoma and 5 drug targets.
+
+Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our design specs found below.
 
 1. Create a data table with the following column headings:
 
@@ -22,15 +18,19 @@ Please call our demo API - https://demo6922545.mockable.io/ - and using the resp
    - Gene ID
    - Gene Name
    - Overall Association Score
+   
+![Open Targets Front End Technical Test Specification - step 1](https://user-images.githubusercontent.com/7490258/74653221-a211e680-517f-11ea-8a55-38564b659a03.png)
 
-2. When a user clicks the “+”, please expand the row of the table. Please show either a bar chart or a radar chart of the association scores for each individual data type (literature, rna_expression, genetic_association, somatic_mutation, known_drug, animal_model, affected_pathway)
+2. When a user clicks the "+", expand the row of the table and show either a bar chart or a radar chart with the association scores for each individual data type - `literature`, `rna_expression`, `genetic_association`, `somatic_mutation`, `known_drug`, `animal_model`, and `affected_pathway`.
+
+![Open Targets Front End Technical Test Specification - step 2](https://user-images.githubusercontent.com/7490258/74653247-b3f38980-517f-11ea-9e01-78494f2e49cb.png)
 
 Please note the following requirements:
 
 - The data table should only have 5 rows
-- The data table should show the genes with the top overall association scores
-- By default, the data table should be sorted in decreasing order by the overall association score
-- For the bar chart or radar chart, please feel free to use any chart or data visualisation library that you are comfortable using, including:
+- The data table should show the targets with the top overall association scores
+- By default, the data table should be sorted by the overall association score in decreasing order - the target with the highest overall score should be on top followed by the target with the next highest score and so on
+- For the bar chart or radar chart, please feel free to use any chart or data visualisation library that you are comfortable using, includinges:
   - D3
   - Chart.js
   - HighCharts
@@ -39,9 +39,7 @@ Please note the following requirements:
   - Recharts
   - … or any other library that you are familiar with using
 
-To make the setup of the project easy, we have bootstrapped it with [Create React App](https://github.com/facebook/create-react-app).
-Feel free to add any dependencies that you wish by adding them to `package.json` or including them as a script tag
-in `public/index.html`.
+To make the setup of the project easy, we have bootstrapped it with [Create React App](https://github.com/facebook/create-react-app). Feel free to add any dependencies that you wish by adding them to `package.json` or including them as a script tag in `public/index.html`.
 
 ## Available Scripts
 
@@ -49,18 +47,14 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your app is ready to be deployed! See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
