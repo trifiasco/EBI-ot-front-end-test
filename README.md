@@ -40,8 +40,8 @@ Please note the following requirements:
   - … or any other library that you are familiar with using
 
 To make the setup of the project easy, we have bootstrapped it with [Create React App](https://github.com/facebook/create-react-app).
-Feel free to add any dependencies that will help you with the visualisations by adding them to `package.json` or including them
-in `public/index.html` as a script tag.
+Feel free to add any dependencies that you wish by adding them to `package.json` or including them as a script tag
+in `public/index.html`.
 
 ## Available Scripts
 
