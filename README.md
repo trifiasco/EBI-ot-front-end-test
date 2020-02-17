@@ -18,10 +18,10 @@ Please call our demo API - https://demo6922545.mockable.io/ - and using the resp
 
 1. Create a data table with the following column headings:
 
-- Symbol
-- Gene ID
-- Gene Name
-- Overall Association Score
+   - Symbol
+   - Gene ID
+   - Gene Name
+   - Overall Association Score
 
 2. When a user clicks the “+”, please expand the row of the table. Please show either a bar chart or a radar chart of the association scores for each individual data type (literature, rna_expression, genetic_association, somatic_mutation, known_drug, animal_model, affected_pathway)
 
