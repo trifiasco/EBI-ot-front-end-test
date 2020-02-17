@@ -25,17 +25,17 @@ When a user clicks the “+”, please expand the row of the table. Please show 
 
 Please note the following requirements:
 
-The data table should only have 5 rows
-The data table should show the genes with the top overall association scores
-By default, the data table should be sorted in decreasing order by the overall association score
-For the bar chart or radar chart, please feel free to use any chart or data visualisation library that you are comfortable using, including:
-D3
-Chart.js
-HighCharts
-CanvasJS
-Google Charts
-Recharts
-… or any other library that you are familiar with using
+- The data table should only have 5 rows
+- The data table should show the genes with the top overall association scores
+- By default, the data table should be sorted in decreasing order by the overall association score
+- For the bar chart or radar chart, please feel free to use any chart or data visualisation library that you are comfortable using, including:
+  - D3
+  - Chart.js
+  - HighCharts
+  - CanvasJS
+  - Google Charts
+  - Recharts
+  - … or any other library that you are familiar with using
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
