@@ -14,14 +14,16 @@ visit https://docs.targetvalidation.org/getting-started/scoring.
 For this technical test, we would like you to create a data table and visualisation showing the association
 scores for lung carcinoma and 5 genes (targets).
 
-Create a data table with the following column headings:
+Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our design spec:
+
+1. Create a data table with the following column headings:
 
 - Symbol
 - Gene ID
 - Gene Name
 - Overall Association Score
 
-When a user clicks the “+”, please expand the row of the table. Please show either a bar chart or a radar chart of the association scores for each individual data type (literature, rna_expression, genetic_association, somatic_mutation, known_drug, animal_model, affected_pathway)
+2. When a user clicks the “+”, please expand the row of the table. Please show either a bar chart or a radar chart of the association scores for each individual data type (literature, rna_expression, genetic_association, somatic_mutation, known_drug, animal_model, affected_pathway)
 
 Please note the following requirements:
 
