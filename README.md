@@ -8,9 +8,9 @@ A score of 0 corresponds to no evidence supporting an association. The closer th
 
 ## Instructions
 
-We would like you to create a data table and visualisation showing the association scores for lung carcinoma and 5 drug targets.
+We would like you to create a data table and visualisations showing the association scores for lung carcinoma and 5 drug targets.
 
-Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on our design specs found below.
+Please call our demo API - https://demo6922545.mockable.io/ - and using the response data, please complete the following steps based on the [design specs](https://docs.google.com/presentation/d/10y3UKefb8q3diULVq8I-8j7j0oj6QGtOMzdW4KM_DKk/edit?usp=sharing) found below.
 
 1. Create a data table with the following column headings:
 
@@ -19,25 +19,23 @@ Please call our demo API - https://demo6922545.mockable.io/ - and using the resp
    - Gene Name
    - Overall Association Score
    
-![Open Targets Front End Technical Test Specification - step 1](https://user-images.githubusercontent.com/7490258/74653221-a211e680-517f-11ea-8a55-38564b659a03.png)
+![Open Targets Front End Technical Test Specification - step 1](https://user-images.githubusercontent.com/7490258/85530357-c9813000-b605-11ea-9cd0-c5f7abe1f501.png)
 
-2. When a user clicks the "+", expand the row of the table and show either a bar chart or a radar chart with the association scores for each individual data type - `literature`, `rna_expression`, `genetic_association`, `somatic_mutation`, `known_drug`, `animal_model`, and `affected_pathway`.
+2. When a user clicks the "+", expand the row of the table and show a bar chart and a radar chart with the association scores for each individual data type - `literature`, `rna_expression`, `genetic_association`, `somatic_mutation`, `known_drug`, `animal_model`, and `affected_pathway`.
 
-![Open Targets Front End Technical Test Specification - step 2](https://user-images.githubusercontent.com/7490258/74653247-b3f38980-517f-11ea-9e01-78494f2e49cb.png)
+![Open Targets Front End Technical Test Specification - step 2](https://user-images.githubusercontent.com/7490258/85530380-cdad4d80-b605-11ea-9f8d-daac0e00587e.png)
 
 Please note the following requirements:
 
-- The data table should only have 5 rows
-- The data table should show the targets with the top overall association scores
+- The data table should only have 5 rows and show the targets with the highest overall association scores
 - By default, the data table should be sorted by the overall association score in decreasing order - the target with the highest overall score should be on top followed by the target with the next highest score and so on
-- For the bar chart or radar chart, please feel free to use any chart or data visualisation library that you are comfortable using, includinges:
+- For the bar and radar charts, please use any chart or data visualisation library that you are comfortable using, such as:
   - D3
   - Chart.js
   - HighCharts
   - CanvasJS
   - Google Charts
   - Recharts
-  - … or any other library that you are familiar with using
 
 To make the setup of the project easy, we have bootstrapped it with [Create React App](https://github.com/facebook/create-react-app). Feel free to add any dependencies that you wish by adding them to `package.json` or including them as a script tag in `public/index.html`.
 
@@ -45,13 +43,17 @@ To make the setup of the project easy, we have bootstrapped it with [Create Reac
 
 In the project directory, you can run:
 
-### `yarn start`
+#### `yarn install`
+
+Installs relevant dependencies for the project.
+
+#### `yarn start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
 
-### `yarn build`
+#### `yarn build`
 
 Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. 
 
