@@ -6,6 +6,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import DataRow from '../dataRow';
 
 const DataTable = props => {
     const {data} = props;
@@ -17,14 +18,14 @@ const DataTable = props => {
                     <TableRow>
                       <TableCell />
                       <TableCell>Symbol</TableCell>
-                      <TableCell align="right">Gene ID</TableCell>
-                      <TableCell align="right">Gene Name</TableCell>
-                      <TableCell align="right">Overall Association Score</TableCell>
+                      <TableCell>Gene ID</TableCell>
+                      <TableCell>Gene Name</TableCell>
+                      <TableCell>Overall Association Score</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {data.map((row) => (
-                        <div>something</div>
+                        <DataRow key={row.id} data={row} />
                     ))}
                   </TableBody>
                 </Table>
