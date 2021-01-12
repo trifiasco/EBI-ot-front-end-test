@@ -8,6 +8,8 @@ const DataTableContainer = props => {
 
     const {data, loading} = useAssociationData();
 
+    console.log(data);
+
     return (
         <div>
             {loading && (
@@ -15,8 +17,10 @@ const DataTableContainer = props => {
                     <CircularProgress color="inherit" />
                 </Backdrop>
             )}
-            {!loading && (
-                <DataTable data={data}/>
+            {!loading && data && (
+                <DataTable
+                    data={data}
+                />
             )}
         </div>
         
