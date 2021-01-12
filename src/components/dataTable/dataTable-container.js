@@ -1,4 +1,6 @@
 import React from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import useAssociationData from './useAssociationData';
 import DataTable from './dataTable-view';
 
@@ -7,7 +9,17 @@ const DataTableContainer = props => {
     const {data, loading} = useAssociationData();
 
     return (
-        <DataTable />
+        <div>
+            {loading && (
+                <Backdrop open={loading}>
+                    <CircularProgress color="inherit" />
+                </Backdrop>
+            )}
+            {!loading && (
+                <DataTable data={data}/>
+            )}
+        </div>
+        
     );
 };
 
