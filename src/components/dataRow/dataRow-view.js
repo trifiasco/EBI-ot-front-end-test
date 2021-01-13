@@ -6,6 +6,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Collapse from '@material-ui/core/Collapse';
 import AddSharpIcon from '@material-ui/icons/AddSharp';
 import RemoveSharpIcon from '@material-ui/icons/RemoveSharp';
+import BarChart from '../barChart';
+import RadarChart from '../radarChart';
 
 
 const useRowStyles = makeStyles({
@@ -20,6 +22,7 @@ const DataRow = props => {
     const {data} = props;
     const {target, association_score} = data;
     const {gene_info} = target;
+    const {datatypes} = association_score;
 
     const [open, setOpen] = useState(false);
     const classes = useRowStyles();
@@ -38,9 +41,14 @@ const DataRow = props => {
                 <TableCell>{association_score.overall}</TableCell>
             </TableRow>
             <TableRow>
-                <TableCell className={classes.collapsibleArea} colSpan={6}>
+                <TableCell className={classes.collapsibleArea} colSpan={12}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
-                        something
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <BarChart data={datatypes} title="Association vs Data Type"/>
+                            <RadarChart data={datatypes} title="Association vs Data Type" />
+                        </div>
+                        
+                        
                     </Collapse>
                 </TableCell>
             </TableRow>
