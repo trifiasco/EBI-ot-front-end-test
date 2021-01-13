@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
+import { makeStyles } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import Collapse from '@material-ui/core/Collapse';
 import AddSharpIcon from '@material-ui/icons/AddSharp';
 import RemoveSharpIcon from '@material-ui/icons/RemoveSharp';
-import { makeStyles } from '@material-ui/core';
+
 
 const useRowStyles = makeStyles({
-    root: {}
+    root: {},
+    collapsibleArea: {
+        paddingBottom: 0, paddingTop: 0
+    }
 })
 
 const DataRow = props => {
@@ -20,17 +25,26 @@ const DataRow = props => {
     const classes = useRowStyles();
 
     return (
-        <TableRow className={classes.root}>
-            <TableCell>
-              <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
-                {open ? <RemoveSharpIcon /> : <AddSharpIcon />}
-              </IconButton>
-            </TableCell>
-            <TableCell>{gene_info.symbol}</TableCell>
-            <TableCell>{target.id}</TableCell>
-            <TableCell>{gene_info.name}</TableCell>
-            <TableCell>{association_score.overall}</TableCell>
-        </TableRow>
+        <>
+            <TableRow className={classes.root}>
+                <TableCell>
+                  <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                    {open ? <RemoveSharpIcon /> : <AddSharpIcon />}
+                  </IconButton>
+                </TableCell>
+                <TableCell>{gene_info.symbol}</TableCell>
+                <TableCell>{target.id}</TableCell>
+                <TableCell>{gene_info.name}</TableCell>
+                <TableCell>{association_score.overall}</TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell className={classes.collapsibleArea} colSpan={6}>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        something
+                    </Collapse>
+                </TableCell>
+            </TableRow>
+        </>
     );
 };
 
