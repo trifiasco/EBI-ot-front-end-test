@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EBI-ot-front-end-test/static/css/main.f0936c25.chunk.css",
+    "main.js": "/EBI-ot-front-end-test/static/js/main.06817d48.chunk.js",
+    "main.js.map": "/EBI-ot-front-end-test/static/js/main.06817d48.chunk.js.map",
+    "runtime-main.js": "/EBI-ot-front-end-test/static/js/runtime-main.40326b86.js",
+    "runtime-main.js.map": "/EBI-ot-front-end-test/static/js/runtime-main.40326b86.js.map",
+    "static/js/2.6679fe4b.chunk.js": "/EBI-ot-front-end-test/static/js/2.6679fe4b.chunk.js",
+    "static/js/2.6679fe4b.chunk.js.map": "/EBI-ot-front-end-test/static/js/2.6679fe4b.chunk.js.map",
+    "index.html": "/EBI-ot-front-end-test/index.html",
+    "precache-manifest.144bd3d144e5c0b739610aa5a86d1683.js": "/EBI-ot-front-end-test/precache-manifest.144bd3d144e5c0b739610aa5a86d1683.js",
+    "service-worker.js": "/EBI-ot-front-end-test/service-worker.js",
+    "static/css/main.f0936c25.chunk.css.map": "/EBI-ot-front-end-test/static/css/main.f0936c25.chunk.css.map",
+    "static/js/2.6679fe4b.chunk.js.LICENSE.txt": "/EBI-ot-front-end-test/static/js/2.6679fe4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40326b86.js",
+    "static/js/2.6679fe4b.chunk.js",
+    "static/css/main.f0936c25.chunk.css",
+    "static/js/main.06817d48.chunk.js"
+  ]
+}
