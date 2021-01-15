@@ -8,8 +8,6 @@ const DataTableContainer = props => {
 
     const {data, loading} = useAssociationData();
 
-    console.log(data);
-
     return (
         <div>
             {loading && (
