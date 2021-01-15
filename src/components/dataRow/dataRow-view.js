@@ -14,8 +14,12 @@ const useRowStyles = makeStyles({
     root: {},
     collapsibleArea: {
         paddingBottom: 0, paddingTop: 0
+    },
+    chartsContainer: {
+        display: 'flex',
+        justifyContent: 'space-between'
     }
-})
+});
 
 const DataRow = props => {
 
@@ -43,7 +47,7 @@ const DataRow = props => {
             <TableRow>
                 <TableCell className={classes.collapsibleArea} colSpan={12}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
-                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <div className={classes.chartsContainer}>
                             <BarChart data={datatypes} title="Association vs Data Type"/>
                             <RadarChart data={datatypes} title="Association vs Data Type" />
                         </div>
