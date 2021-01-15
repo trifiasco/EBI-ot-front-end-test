@@ -22,17 +22,25 @@ const BarChart = props => {
                         label: title,
                         data: datasets,
                         backgroundColor: '#2980B9',
-                        borderWidth: 1
                     }]
                 },
                 options: {
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero: true,
-                                maxTicksLimit: 4,
+                                max: 1,
+                                min: 0,
+                                stepSize: 0.2
                             }
                         }]
+                    },
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 50,
+                            top: 0,
+                            bottom: 0
+                        }
                     }
                 }
             });
@@ -40,7 +48,7 @@ const BarChart = props => {
     }, [chartRef, labels, datasets, title])
     
     return (
-        <div style={{width: '40%'}}>
+        <div style={{width: '50%'}}>
             <canvas
                 id="myChart"
                 ref={chartRef}
