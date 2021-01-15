@@ -6,8 +6,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Collapse from '@material-ui/core/Collapse';
 import AddSharpIcon from '@material-ui/icons/AddSharp';
 import RemoveSharpIcon from '@material-ui/icons/RemoveSharp';
-import BarChart from '../barChart';
-import RadarChart from '../radarChart';
+import BarChart from '../charts/barChart';
+import RadarChart from '../charts/radarChart';
 
 
 const useRowStyles = makeStyles({

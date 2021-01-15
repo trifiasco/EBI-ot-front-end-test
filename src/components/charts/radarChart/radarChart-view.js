@@ -15,24 +15,31 @@ const BarChart = props => {
             const myChartRef = chartRef.current.getContext("2d");
     
             new Chart(myChartRef, {
-                type: "bar",
+                type: "radar",
                 data: {
                     labels: labels,
                     datasets: [{
                         label: title,
                         data: datasets,
-                        backgroundColor: '#2980B9',
-                        borderWidth: 1
+                        borderColor: '#2980B9',
+                        pointBackgroundColor: '#2980B9',
                     }]
                 },
                 options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                maxTicksLimit: 4,
-                            }
-                        }]
+                    scale: {
+                        ticks: {
+                            min: 0,
+                            max: 1,
+                            stepSize: .2
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 50,
+                            top: 0,
+                            bottom: 0
+                        }
                     }
                 }
             });
@@ -40,7 +47,7 @@ const BarChart = props => {
     }, [chartRef, labels, datasets, title])
     
     return (
-        <div style={{width: '40%'}}>
+        <div style={{width: '50%'}}>
             <canvas
                 id="myChart"
                 ref={chartRef}
