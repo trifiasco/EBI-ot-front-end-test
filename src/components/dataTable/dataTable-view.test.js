@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import DataTable from './dataTable-view';
-import sampleData from './sampleData.json';
+import sampleData from '../../utils/sampleData.json';
 
 afterEach(cleanup);
 
