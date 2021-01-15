@@ -35,7 +35,7 @@ const DataRow = props => {
         <>
             <TableRow className={classes.root}>
                 <TableCell>
-                  <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                  <IconButton data-testid="click-icon" aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
                     {open ? <RemoveSharpIcon /> : <AddSharpIcon />}
                   </IconButton>
                 </TableCell>
@@ -47,7 +47,7 @@ const DataRow = props => {
             <TableRow>
                 <TableCell className={classes.collapsibleArea} colSpan={12}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
-                        <div className={classes.chartsContainer}>
+                        <div data-testid="chart-container" className={classes.chartsContainer}>
                             <BarChart data={datatypes} title="Association vs Data Type"/>
                             <RadarChart data={datatypes} title="Association vs Data Type" />
                         </div>
