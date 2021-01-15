@@ -12,6 +12,7 @@ const DataTable = props => {
     const {data} = props;
     return (
         <div>
+          <h1>Data Table</h1>
             <TableContainer component={Paper}>
                 <Table aria-label="collapsible table">
                   <TableHead>
