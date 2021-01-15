@@ -1,5 +1,12 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef} from 'react';
+import { makeStyles } from '@material-ui/core';
 import Chart from "chart.js";
+
+const useBarChartStyles = makeStyles({
+    root: {
+        width: '50%'
+    }
+});
 
 const BarChart = props => {
     const chartRef = useRef();
@@ -8,7 +15,9 @@ const BarChart = props => {
     const labels = Object.keys(data);
     const datasets = labels.map(key => {
         return data[key];
-    })
+    });
+
+    const classes = useBarChartStyles();
 
     useEffect(() => {
         if(chartRef.current){
@@ -48,7 +57,7 @@ const BarChart = props => {
     }, [chartRef, labels, datasets, title])
     
     return (
-        <div style={{width: '50%'}}>
+        <div className={classes.root}>
             <canvas
                 id="myChart"
                 ref={chartRef}
