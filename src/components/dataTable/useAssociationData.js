@@ -11,7 +11,12 @@ const useAssociationData = () => {
         fetch(apiUrl)
         .then((res) => res.json())
         .then(response => {
-            setData(response.data);
+            const data = response.data.sort((a, b) => {
+                // to sort on overall association score in descending order.
+                return a.association_score.overall < b.association_score.overall
+                        ? 1 : -1;
+            });
+            setData(data);
             setLoading(false);
         });
 
